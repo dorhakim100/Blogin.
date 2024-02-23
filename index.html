@@ -11,19 +11,23 @@
 
 <body class="main-layout" onload="init()">
     <script src="https://kit.fontawesome.com/64c9fbe692.js" crossorigin="anonymous"></script>
-       <header class="main-header">
-        <div class="header-container">
-            <div class="logo">Blogin</div>
-            <nav class="main-nav-list">
-                <li class="nav-link"><a href="#">Journal</a></li>
-                <li class="nav-link"><a href="#"></a>About</li>
-                <li class="nav-link"><a href="#"></a>Work</li>
-                <li class="nav-link"><a href="#"></a>Contact</li>
-            </nav>
-            
-        </div>
-    </header>
-    
+    <div class="main-screen"  onclick="toggleNav()"></div>
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">Blogin</div>
+                <nav class="main-nav">
+                    <div class="main-nav-list">
+                        
+                        <li class="nav-link"><a href="#">Journal</a></li>
+                        <li class="nav-link"><a href="#"></a>About</li>
+                        <li class="nav-link"><a href="#"></a>Work</li>
+                        <li class="nav-link"><a href="#"></a>Contact</li>
+                    </div>
+                </nav>
+                <div class="hamburger"><button class="hamburger-btn" onclick="toggleNav()">≡</button></div>
+            </div>
+        </header>
+        
     <!-- <main class="main-content"> -->
         <div class="main-content">
 
@@ -75,6 +79,16 @@
         </footer>
         
         
+        <script> 
+        function toggleNav() {
+            const elNav = document.querySelector('.main-nav')
+            console.log('elNav:', elNav)
+            document.querySelector('.main-nav').classList.toggle('open-menu')
+            const elScreen = document.querySelector('.main-screen')
+            document.querySelector('.main-nav').classList.contains('open-menu') ? document.querySelector('.hamburger-btn').innerText = 'X' : document.querySelector('.hamburger-btn').innerText = '≡'
+            document.querySelector('.main-nav').classList.contains('open-menu') ? elScreen.style.opacity = '1' : elScreen.style.opacity = '0'
+        }
+        </script>
         <script src="js/utils.js"></script>
     <script src="js/JAVASCRIPT_NAME_HERE.js"></script>
 </body>
