@@ -1,0 +1,26 @@
+.nav-btns{
+    /* width: 100%; */
+    margin: auto;
+    width: 100%;
+    border: 1px solid rgb(127, 127, 127);
+    padding: 20px 0px 20px;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.pre{
+  
+
+    justify-self: start;
+    
+}
+
+.next{
+
+    justify-self: end;
+}

@@ -1,0 +1,45 @@
+.card-image{
+    /* height: 100%; */
+    width: 100%;
+    grid-column: 1fr;
+}
+
+h2{
+    margin-top: 0px;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    /* margin: auto; */
+
+}
+
+.card-text{
+    /* margin-inline-start: 20px; */
+    max-width: 80%;
+    margin: 20;
+}
+
+
+.card-p{
+
+}
+
+.card-text-container{
+    margin-inline-start: 20px;
+}
+
+.continue-btn{
+    font-size: 15px;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: rgb(45, 45, 45);
+    border: 1px solid rgb(45, 45, 45);
+
+    
+}
+
+.continue-btn:hover{
+    border: 1px solid green;
+    color: green;
+}
