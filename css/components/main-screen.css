@@ -11,5 +11,9 @@
     pointer-events: none;
   }
   
+  .open-menu{
+    pointer-events: auto;
+    opacity: 1;
+}
 
   

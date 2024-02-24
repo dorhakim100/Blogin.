@@ -18,7 +18,15 @@
                 <nav class="main-nav">
                     <div class="main-nav-list">
                         
-                        <li class="nav-link"><a href="#">Journal</a></li>
+                        <li class="nav-link dropdown" onclick="openDropContent()">
+                            <a class="dropbtn" href="#">Journal</a>
+                            <div class="dropdown-content">
+                                <a href="#">October 2016</a>
+                                <a href="#">January 2017</a>
+                                <a href="#">April 2017</a>
+                                <a href="#">July 2017</a>
+                            </div>
+                        </li>
                         <li class="nav-link"><a href="#"></a>About</li>
                         <li class="nav-link"><a href="#"></a>Work</li>
                         <li class="nav-link"><a href="#"></a>Contact</li>
@@ -37,7 +45,7 @@
                 <div class="card-text">
                     <h2 class="card-title">duis aute irure dolor in henderit in voluptate.</h2>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa officiis quos dicta eaque mollitia sequi officia quod. Veniam rerum doloremque ipsam magnam dignissimos! Rerum vel vero explicabo error laborum.</p>
-                    <button class="continue-btn">Continue Reading →</button>
+                    <button class="continue-btn" onclick="readingModal()">Continue Reading →</button>
                 </div>
             </div>
             <div class="card">
@@ -46,7 +54,7 @@
                 <div class="card-text">
                     <h2 class="card-title">duis aute irure dolor in henderit in voluptate.</h2>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa officiis quos dicta eaque mollitia sequi officia quod. Veniam rerum doloremque ipsam magnam dignissimos! Rerum vel vero explicabo error laborum.</p>
-                    <button class="continue-btn">Continue Reading →</button>
+                    <button class="continue-btn" onclick="readingModal()">Continue Reading →</button>
                 </div>
             </div>
             <div class="card">
@@ -55,7 +63,7 @@
                 <div class="card-text">
                     <h2 class="card-title">duis aute irure dolor in henderit in voluptate.</h2>
                     <p class="card-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa officiis quos dicta eaque mollitia sequi officia quod. Veniam rerum doloremque ipsam magnam dignissimos! Rerum vel vero explicabo error laborum.</p>
-                    <button class="continue-btn">Continue Reading →</button>
+                    <button class="continue-btn" onclick="readingModal()">Continue Reading →</button>
                 </div>
             </div>
             
@@ -66,6 +74,17 @@
             
             
         </div>
+        <div class="modal-container">
+            
+            <div class="modal">
+                <h2 class="modal-h2">duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="modal-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius ad ex? Id suscipit in ut ipsum inventore? Earum porro commodi ipsum dignissimos sed non harum possimus obcaecati velit qui.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officiis harum natus vel odio suscipit libero ipsam alias in, ea aspernatur nihil saepe odit provident labore repudiandae molestias eveniet sunt.</p>
+                <button class="close-btn" onclick="readingModal()">Close</button>
+            </div>
+
+        </div>
+
         <!-- </main> -->
         <footer class="footer">
             <div class="logo-footer">Blogin</div>
@@ -81,13 +100,40 @@
         
         <script> 
         function toggleNav() {
-            const elNav = document.querySelector('.main-nav')
-            console.log('elNav:', elNav)
-            document.querySelector('.main-nav').classList.toggle('open-menu')
             const elScreen = document.querySelector('.main-screen')
+            const elModal = document.querySelector('.modal')
+            if(elModal.classList.contains('open')) {
+            elScreen.style.opacity = '0'
+            elScreen.style.pointerEvents = 'none'
+            elModal.style.display = 'none'
+            elModal.classList.remove('open')
+            return
+            }
+            const elNav = document.querySelector('.main-nav')
+            document.querySelector('.main-nav').classList.toggle('open-menu')
             document.querySelector('.main-nav').classList.contains('open-menu') ? document.querySelector('.hamburger-btn').innerText = 'X' : document.querySelector('.hamburger-btn').innerText = '≡'
             document.querySelector('.main-nav').classList.contains('open-menu') ? elScreen.style.opacity = '1' : elScreen.style.opacity = '0'
             document.querySelector('.main-nav').classList.contains('open-menu') ? elScreen.style.pointerEvents = 'auto' : elScreen.style.pointerEvents = 'none'
+        }
+        function readingModal(){
+            const elModal = document.querySelector('.modal')
+            console.log('elModal.classList:', elModal.classList)
+            elModal.classList.toggle('open')
+            const elScreen = document.querySelector('.main-screen')
+            elModal.classList.contains('open') ? elScreen.style.opacity = '1' : elScreen.style.opacity = '0'
+            elModal.classList.contains('open') ? elScreen.style.pointerEvents = 'auto' : elScreen.style.pointerEvents = 'none'
+            elModal.classList.contains('open') ? elModal.style.display = 'flex' : elModal.style.display = 'none'
+
+        }
+
+        function openDropContent(){
+            console.log('works');
+            const elDrop = document.querySelector('.dropdown-content')
+            console.log('elDrop.style.display:', elDrop.style.display)
+            if((elDrop.style.display === '') || (elDrop.style.display === 'none')) {
+               elDrop.style.display = 'block'
+               
+            } else elDrop.style.display = 'none' 
         }
         </script>
         <script src="js/utils.js"></script>

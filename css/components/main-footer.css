@@ -4,6 +4,7 @@
     background-color: rgb(241, 241, 241);
     position: relative;
     top: 110px;
+    z-index: -1;
 }
 
 .logo-footer{

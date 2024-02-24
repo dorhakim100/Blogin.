@@ -4,6 +4,8 @@
     /* height: 100%; */
     /* width: 100%; */
     /* grid-column: 1fr; */
+    padding: 0px 20px 20px;
+    z-index: -1;
 }
 
 h2{
@@ -33,11 +35,12 @@ h2{
     font-size: 15px;
     cursor: pointer;
     height: 30px;
+    width: 250px;
     border-radius: 50px;
     background-color: transparent;
     color: rgb(45, 45, 45);
     border: 1px solid rgb(45, 45, 45);
-
+    align-self: center;
     
 }
 
