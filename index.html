@@ -68,7 +68,7 @@
         </div>
         <!-- </main> -->
         <footer class="footer">
-            <div class="logo">Blogin</div>
+            <div class="logo-footer">Blogin</div>
             <div class="copy-rigths">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span>Pixelhint.com</span></div>
             <div class="links-container">
                 <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
@@ -87,6 +87,7 @@
             const elScreen = document.querySelector('.main-screen')
             document.querySelector('.main-nav').classList.contains('open-menu') ? document.querySelector('.hamburger-btn').innerText = 'X' : document.querySelector('.hamburger-btn').innerText = '≡'
             document.querySelector('.main-nav').classList.contains('open-menu') ? elScreen.style.opacity = '1' : elScreen.style.opacity = '0'
+            document.querySelector('.main-nav').classList.contains('open-menu') ? elScreen.style.pointerEvents = 'auto' : elScreen.style.pointerEvents = 'none'
         }
         </script>
         <script src="js/utils.js"></script>

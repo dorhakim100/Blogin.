@@ -10,6 +10,7 @@
 }
 
 .main-header{
+    width: 100vw;
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 
@@ -50,7 +51,7 @@ flex-grow: 1;
 
 .main-content{
     grid-column: 2;
-    border: 1px solid black;
+    
 }
 
 .main-content > *{

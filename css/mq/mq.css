@@ -29,9 +29,9 @@
         /* display: none; */
         flex-direction: column;
         position: fixed;
-        right: 70%;
+        right: 625px;
         top: 130px;
-        width: 200px;
+        width: 80vw;
         height: 100dvh;
             
         background-color: var(--header-);
@@ -81,6 +81,11 @@
 @media (min-width: 741px){
     .hamburger{
         display: none;    
+    }
+
+    .main-screen{
+        display: none;
+        
     }
     
 }

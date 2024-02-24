@@ -2,13 +2,20 @@
     font-family: Lato-Reegular;
     align-items: center;
     background-color: rgb(241, 241, 241);
-    
+    position: relative;
+    top: 110px;
 }
 
-.logo{
+.logo-footer{
     font-family: eurofurence;
     font-size: 1.625em;
     justify-self: center;
+}
+
+.logo-footer::after {
+    content: '.';
+    color: var(--green-);
+    margin-right: 20px;
 }
 
 .copy-rigths{

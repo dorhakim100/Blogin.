@@ -11,6 +11,7 @@
 /* components */
 @import url(components/main-header.css);
 @import url(components/main-screen.css);
+@import url(components/main-body.css);
 @import url(components/card.css);
 @import url(components/page-navigation.css);
 @import url(components/main-footer.css);

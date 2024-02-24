@@ -2,6 +2,8 @@
     height: 130px;
     background-color: var(--header-);
     color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1;
 }
 
 /* .main-header::before{
@@ -17,7 +19,8 @@
 .logo{
     font-family: eurofurence;
     font-size: 1.625em;
-    justify-self: center;
+    justify-self: start;
+    width: 100%;
 }
 
 .logo::after {
@@ -29,7 +32,7 @@
 
 .main-nav-list{
     position: relative;
-
+    right: 15px;
 }
 
 li{
@@ -41,13 +44,15 @@ li{
     color: var(--green-);
 }
 
+
+
 .nav-link:hover ::after{
     content: '';
-    position: fixed;
+    position: absolute;
     top: 126px;
     
     height: 2px;
-    width: 10%;
+    width: 100%;
     background-color: var(--green-);
     border: 1px solid var(--green-);
 }
